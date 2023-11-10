@@ -38,7 +38,7 @@ const main = async () => {
         const url = `https://global.wildberries.ru/catalog?category=${categoryId}`; //вставляю id подкатегории в строку
 
         // Переход на страницу с категорией товаров.
-        await page.goto(url, { waitUntil: 'networkidle0' });
+        await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 });// поставил таймер на 6 сек
 
         // Прокрутка страницы до конца.
         await autoScroll(page);
