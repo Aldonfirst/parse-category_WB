@@ -8,7 +8,7 @@ module.exports = async function () {
             const href = linkElement.getAttribute('href');
             product.id = href.substring(href.indexOf('=')+1);
         }
-
+//селекторы 
         const imgElement = productCard.querySelector('.card-img picture img');
         const priceElement = productCard.querySelector('[data-tag="salePrice"]');
         const oldPriceElement = productCard.querySelector('.price__old del');
@@ -17,7 +17,7 @@ module.exports = async function () {
         const nameElement = productCard.querySelector('.b-card__name');
         const ratingElement = productCard.querySelector('.b-card__rating span:last-child');
         const deliveryElement = productCard.querySelector('[data-tag="delivery"] span');
-
+//проверки селекторов
         if(linkElement) product.link = linkElement.getAttribute('href');
         if(imgElement) product.imgSrc = imgElement.getAttribute('src');
         if(priceElement && priceElement.textContent) product.price = priceElement.textContent.trim();
